@@ -23,6 +23,7 @@ public class WebViewBridgeManager extends ReactWebViewManager {
       public void configWebView(WebView webView) {
           JavascriptBridge jsInterface = new JavascriptBridge((ReactContext)webView.getContext());
           webView.addJavascriptInterface(jsInterface, "WebViewBridgeAndroid");
+          webView.setWebContentsDebuggingEnabled(true);
       }
     });
   }
